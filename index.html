@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokan Khata</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row g-5">
+            <!-- Left Column: Input -->
+            <div class="col-md-8">
+                <h2>Sell Your Goods</h2>
+                <p>Date:</p>
+                <form id="inputForm">
+                    <div class="form-row d-flex gap-3 mb-4">
+                        <div class="form-group col-md-4">
+                            <label for="goods" class="fw-bold">Select Your Goods:</label> <br>
+                            <select class="form-select form-select-sm" aria-label="Large select example">
+                                <option selected>Select Your Goods</option>
+                                <option value="1">Monitor</option>
+                                <option value="2">Laptop</option>
+                                <option value="3">SSD</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="inputField1" class="fw-bold">Quantity:</label>
+                            <input type="text" class="form-control form-control-sm quantity-input" name="quantity"
+                                placeholder="Enter value">
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="inputField1" class="fw-bold">Price (Per Unit):</label>
+                            <input type="text" class="form-control form-control-sm price-input" name="price"
+                                placeholder="Enter value">
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-success" id="addButton" onclick="addRow()"> + Add
+                        Another</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Output -->
+            <div class="col-md-4">
+                <h2>Output</h2> <br>
+                <form action="">
+                    <div class="">
+                        <div class="form-group col-md-8 mb-3">
+                            <label for="totalPrice" class="fw-bold">Total Price:</label>
+                            <input type="text" class="form-control form-control-sm" id="totalPrice"
+                                placeholder="Enter value" readonly>
+                        </div>
+
+                        <div class="form-group col-md-8 mb-3">
+                            <label for="paid" class="fw-bold">Paid:</label>
+                            <input type="text" class="form-control form-control-sm" id="paid" placeholder="Enter value">
+
+                        </div>
+
+                        <div class="form-group col-md-8 mb-3">
+                            <label for="due" class="fw-bold">Due:</label>
+                            <input type="text" class="form-control form-control-sm" id="due" placeholder="Enter value" readonly>
+                        </div>
+
+                        <button type="button" class="btn btn-success" id="addButton"> Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap Js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
