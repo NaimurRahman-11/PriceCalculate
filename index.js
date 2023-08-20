@@ -18,6 +18,8 @@ function addRow() {
     clone.querySelector(".paid-input").addEventListener("input", updateDueAmount);
 }
 
+
+
 function updateDueAmount() {
     const totalPrice = parseFloat(document.getElementById("totalPrice").value) || 0;
     let paidAmount = parseFloat(document.getElementById("paid").value) || 0;
@@ -30,6 +32,8 @@ function updateDueAmount() {
     const dueInput = document.getElementById("due");
     dueInput.value = dueAmount.toFixed(2);
 }
+
+
 
 // Attach event listener to the "Paid" input field
 const paidInput = document.getElementById("paid");
@@ -53,6 +57,8 @@ function updateTotalPrice() {
     updateDueAmount();
 }
 
+
+
 function initializeListeners() {
     const quantityInputs = document.querySelectorAll(".quantity-input");
     const priceInputs = document.querySelectorAll(".price-input");
@@ -63,6 +69,8 @@ function initializeListeners() {
 
 // Call initializeListeners() once to attach listeners to initial input fields
 initializeListeners();
+
+
 
 
 // Attach event listener to the "Submit" button
